@@ -1,8 +1,8 @@
 from IPython.display import display, HTML
-import gradio
-import os, yaml
 import transformers
+import os, yaml
 import logging
+import gradio
 import torch
 
 logging.basicConfig(level=logging.INFO)
@@ -26,7 +26,6 @@ class ChatStatus():
     def get_history_as_text(self) -> str:
         """Returns the chat history as a formatted string."""
         return "\n".join(f"{msg['role']}: {msg['content']}" for msg in self.history)
-
 
     def _truncate_history(self):
         """
@@ -59,15 +58,22 @@ class ChatStatus():
     
 def load_model(config):
 
-    model_dir = os.path.join(os.getcwd(), '..', config['model']['path'])
+    model_dir = os.path.join("/src/app", config['model']['path'])
+
+    snapshots = os.listdir(model_dir)
+    if snapshots:
+        latest_snapshot = snapshots[0] # Assuming the first one is the latest
+        full_model_dir = os.path.join(model_dir, latest_snapshot)
+        logger.info(f"Model path: {full_model_dir}")
+    else:
+        logger.info(f"No snapshots found inside {model_dir}")
 
     try:
-        logger.info(f"Attempting to load tokenizer and model from {model_dir}")
-        tokenizer = transformers.AutoTokenizer.from_pretrained(model_dir)
+        logger.info(f"Attempting to load tokenizer and model from {full_model_dir}")
+        tokenizer = transformers.AutoTokenizer.from_pretrained(full_model_dir)
         logger.info("Model and tokenizer successfully loaded from primary directory.")
-        model_id = model_dir
+        model_id = full_model_dir
     except (OSError, ValueError) as e:
-        # Handle specific exceptions for file or directory issues
         logger.error(f"Failed to load from {model_dir}: {e}")
         raise SystemExit(f"Failed to load the model: {e}")
     except Exception as e:
@@ -88,7 +94,7 @@ def load_model(config):
 
 if __name__=="__main__":
 
-    config_path = os.path.join('..', '..', 'config', 'config.yml')
+    config_path = "/src/config/config.yml"
     with open(config_path, 'r') as file:
         config = yaml.safe_load(file)
 
