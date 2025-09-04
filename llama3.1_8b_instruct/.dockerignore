@@ -1,0 +1,9 @@
+/docs
+/app/models/
+/app/flagged/
+/app/python/flagged/
+/app/noptebooks/flagged/
+.gitignore
+scripts/setup.sh
+docker-compose.yml
+Dockerfile
