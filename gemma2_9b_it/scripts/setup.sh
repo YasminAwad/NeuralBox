@@ -47,17 +47,24 @@ except Exception as e:
 
 model_id = config['model']['model_name']
 
-transformers.pipeline(
+tokenizer = transformers.AutoTokenizer.from_pretrained(model_id)
+
+model = transformers.AutoModelForCausalLM.from_pretrained(
+    model_id,
+    dtype=torch.bfloat16,
+    device_map="auto"
+)
+
+pipe = transformers.pipeline(
     "text-generation",
-    model=model_id,
-    model_kwargs={"dtype": torch.bfloat16},
-    device_map="auto",
+    model=model,
+    tokenizer=tokenizer,
 )
 EOF
 
 # Move the downloaded model to the specified folder
 echo "Moving model's checkpoints to app/models..."
-SOURCE_DIR="$HOME/.cache/huggingface/hub/models--meta-llama--Meta-Llama-3.1-8B-Instruct"
+SOURCE_DIR="$HOME/.cache/huggingface/hub/models--google--gemma-2-9b-it"
 DEST_DIR="./app/models"
 
 if [ -d "$SOURCE_DIR" ]; then

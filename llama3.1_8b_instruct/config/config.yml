@@ -1,6 +1,0 @@
-model:
-  path: models/models--meta-llama--Meta-Llama-3.1-8B-Instruct/snapshots
-  model_name: meta-llama/Meta-Llama-3.1-8B-Instruct
-
-hugging_face:
-  token: <your_huggingface_token>

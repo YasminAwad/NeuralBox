@@ -1,8 +1,0 @@
-torch
-torchvision
-gradio==4.40.0
-transformers==4.47.1
-accelerate==0.33.0
-jupyter==1.0.0
-jupyter-server==2.14.2
-fastapi==0.112.2

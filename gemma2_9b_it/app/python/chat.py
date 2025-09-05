@@ -106,7 +106,7 @@ if __name__=="__main__":
         fn= chat_status.send_message,
         inputs=gradio.Textbox(lines=2, placeholder="Type your message here..."),
         outputs="text",
-        title="Llama3.1-8B-instruct Model Chat Interface",
+        title="Gemmma-2-9B-it Model Chat Interface",
         description="Chat with the model."
     )
 
