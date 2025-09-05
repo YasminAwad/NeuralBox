@@ -1,0 +1,6 @@
+model:
+  path: models/models--deepseek-ai--deepseek-llm-7b-chat/snapshots
+  model_name: deepseek-ai/deepseek-llm-7b-chat
+
+hugging_face:
+  token: <your_hugging_face_token>
