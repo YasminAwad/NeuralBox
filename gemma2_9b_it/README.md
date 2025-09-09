@@ -1,6 +1,6 @@
-# DeepSeek-LLM-7b-Chat ChatBox
+# Gemma-2-9b-It ChatBox
 
-This repository allows you to chat with the *[DeepSeek-LLM-7b-Chat](https://huggingface.co/deepseek-ai/deepseek-llm-7b-chat)* model in a self-contained environment.
+This repository allows you to chat with the *[Gemma2-9b-It](https://huggingface.co/google/gemma-2-9b-it)* model in a self-contained environment.
 
 ## 🚀 Getting Started
 
@@ -25,7 +25,7 @@ source .venv/bin/activate
 Enter the folder of the model box you want to play with:
 
 ```bash
-cd ./deepseek_llm_7b_chat
+cd ./gemma2_9b_it
 ```
 
 ### 4. Add your Hugging Face token
