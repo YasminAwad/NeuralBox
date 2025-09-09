@@ -1,6 +1,6 @@
 # Mixtral-7B-Instruct-v0.3 ChatBox
 
-This repository allows you to chat with the *[Mixtral-7B-Instruct-v0.3](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3)* model in a self-contained environment.
+This repository guides you on how to chat with the *[Mixtral-7B-Instruct-v0.3](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3)* model in a self-contained environment.
 
 ## 🚀 Getting Started
 
