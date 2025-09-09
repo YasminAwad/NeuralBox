@@ -1,0 +1,6 @@
+model:
+  path: models/models--mistralai--Mistral-7B-Instruct-v0.3/snapshots
+  model_name: mistralai/Mistral-7B-Instruct-v0.3
+
+hugging_face:
+  token: <your-hugging-face-token>

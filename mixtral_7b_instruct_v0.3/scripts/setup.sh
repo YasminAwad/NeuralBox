@@ -57,7 +57,7 @@ EOF
 
 # Move the downloaded model to the specified folder
 echo "Moving model's checkpoints to app/models..."
-SOURCE_DIR="$HOME/.cache/huggingface/hub/models--meta-llama--Meta-Llama-3.1-8B-Instruct"
+SOURCE_DIR="$HOME/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.3"
 DEST_DIR="./app/models"
 
 if [ -d "$SOURCE_DIR" ]; then

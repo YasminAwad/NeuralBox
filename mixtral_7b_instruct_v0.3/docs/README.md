@@ -1,6 +1,6 @@
-# DeepSeek-LLM-7b-Chat ChatBox
+# Mixtral-7B-Instruct-v0.3 ChatBox
 
-This repository allows you to chat with the *[DeepSeek-LLM-7b-Chat](https://huggingface.co/deepseek-ai/deepseek-llm-7b-chat)* model in a self-contained environment.
+This repository allows you to chat with the *[Mixtral-7B-Instruct-v0.3](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3)* model in a self-contained environment.
 
 ## 🚀 Getting Started
 
@@ -22,10 +22,10 @@ source .venv/bin/activate
 
 ### 3. Choose the model
 
-Enter the folder of the model box you want to play with:
+Enter the folder of the model you want to play with:
 
 ```bash
-cd ./deepseek_llm_7b_chat
+cd ./mixtral_7b_instruct_v0.3
 ```
 
 ### 4. Add your Hugging Face token
