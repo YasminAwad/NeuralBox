@@ -1,0 +1,16 @@
+services:
+  jupyter:
+    build: .
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=All
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: ["gpu"]
+    ports:
+      - "8888:8888"
+      - "7860:7860"
+      - "24:24"
+    volumes:
+      - ./app/models:/src/app/models
