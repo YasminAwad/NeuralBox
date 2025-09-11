@@ -1,5 +1,13 @@
 # NeuralBox 🧠📦
 
+![Python](https://img.shields.io/badge/Language-Python-3776AB) 
+![Docker](https://img.shields.io/badge/Containerization-Docker-2496ED) 
+![Jupyter](https://img.shields.io/badge/Exploration-Jupyter-F37626) 
+![Gradio](https://img.shields.io/badge/UI-Gradio-FF6F00) 
+![HuggingFace](https://img.shields.io/badge/Models-HuggingFace-FFD21E) 
+![Linux](https://img.shields.io/badge/OS-Linux-FCC624)
+
+
 **Run, explore, and chat with state-of-the-art AI models in isolated “boxes.”**
 
 NeuralBox provides a modular way to experiment with different AI models.
